@@ -15,8 +15,7 @@ func _ready():
 
 func _process(delta):
   nPos.global_transform.origin = (nPosPivot.global_transform.origin
-    - Vector3(nCamera.rotation_degrees.z * .05, abs(
-      nCamera.rotation_degrees.z * .05), 0))
+    - Vector3(0, abs(nCamera.rotation_degrees.z * .05), 0))
   nPos.global_transform = nPos.global_transform.interpolate_with(
     nPosPivot.global_transform, 20 * delta)
 
