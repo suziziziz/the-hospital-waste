@@ -9,10 +9,10 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "EditorProperty",
+"base": "Reference",
 "class": "EC_CreateCategory",
 "language": "GDScript",
-"path": "res://addons/export_categories/ec_create_category.gd"
+"path": "res://addons/godot-export-categories/addons/export_categories/ec_create_category.gd"
 }, {
 "base": "Area",
 "class": "TheItem",
@@ -47,7 +47,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/export_categories/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/export_categories/plugin.cfg", "res://addons/godot-export-categories/addons/export_categories/plugin.cfg" )
 
 [global]
 
