@@ -1,0 +1,309 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://objects/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/textures/placeholders/wall.jpg" type="Texture" id=2]
+[ext_resource path="res://objects/FlashLight/FlashLight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Environment.tscn" type="PackedScene" id=4]
+[ext_resource path="res://shaders/godot-psx-shaders/PSX Shaders/psx_lit.shader" type="Shader" id=5]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 5 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/specular_intensity = null
+shader_param/resolution = 48.0
+shader_param/cull_distance = 45.0
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 2 )
+
+[node name="TestWorld" type="Spatial"]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 4 )]
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+
+[node name="CSGBox11" type="CSGBox" parent="Spatial"]
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox12" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox13" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox14" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox15" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox16" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox43" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox44" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -4 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox45" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -8 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox46" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -12 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox47" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -16 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox48" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -20 )
+use_collision = true
+width = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox17" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -20 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox18" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -16 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox19" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -12 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox20" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -8 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox21" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -4 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox22" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 0 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox23" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -20 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox24" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -16 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox25" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -12 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox26" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -8 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox27" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -4 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox28" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, 0 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox29" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 3 )
+use_collision = true
+width = 4.0
+height = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox30" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 7, -20 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox31" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 7, -16 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox32" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 7, -12 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox33" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 7, -8 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox34" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 7, -4 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox35" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 7, 0 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox36" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 7, -20 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox37" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 7, -16 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox38" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 7, -12 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox39" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 7, -8 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox40" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 7, -4 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox41" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 7, 0 )
+use_collision = true
+height = 4.0
+depth = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox42" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 3 )
+use_collision = true
+width = 4.0
+height = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox49" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -23 )
+use_collision = true
+width = 4.0
+height = 4.0
+material = SubResource( 2 )
+
+[node name="CSGBox50" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -23 )
+use_collision = true
+width = 4.0
+height = 4.0
+material = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="FlashLight" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0.200423, -14 )

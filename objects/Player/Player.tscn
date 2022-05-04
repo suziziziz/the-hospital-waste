@@ -1,0 +1,238 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://objects/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://objects/Player/Crosshair.gd" type="Script" id=2]
+[ext_resource path="res://assets/sfx/pick-item.wav" type="AudioStream" id=3]
+[ext_resource path="res://objects/Player/Item.gd" type="Script" id=5]
+
+[sub_resource type="CapsuleShape" id=2]
+height = 2.0
+
+[sub_resource type="CapsuleMesh" id=1]
+mid_height = 2.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CameraPivot/Camera:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CameraPivot/Camera:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CameraPivot/Camera:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CameraPivot/Camera:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "Run"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("CameraPivot/Camera:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( -2, -2, -2, -2, -2 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, -0.1, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, -0.1, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CameraPivot/Camera:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -2 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 2 ), Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Walk"
+length = 1.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CameraPivot/Camera:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6 ),
+"transitions": PoolRealArray( -2, -2, -2, -2, -2 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, -0.1, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, -0.1, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CameraPivot/Camera:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -2 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 2 ), Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "Run"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+switch_mode = 1
+xfade_time = 1.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+switch_mode = 1
+xfade_time = 1.2
+
+[sub_resource type="AnimationNodeStateMachine" id=10]
+states/Idle/node = SubResource( 6 )
+states/Idle/position = Vector2( 304.63, 131 )
+states/Run/node = SubResource( 13 )
+states/Run/position = Vector2( 559, 130.094 )
+states/Walk/node = SubResource( 7 )
+states/Walk/position = Vector2( 431, 255.038 )
+transitions = [ "Idle", "Walk", SubResource( 8 ), "Walk", "Idle", SubResource( 9 ), "Idle", "Run", SubResource( 14 ), "Run", "Idle", SubResource( 15 ), "Run", "Walk", SubResource( 16 ), "Walk", "Run", SubResource( 17 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -109.786, 39 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
+
+[node name="Player" type="KinematicBody"]
+collision_layer = 2
+script = ExtResource( 1 )
+
+[node name="Coll" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="Mesh" type="MeshInstance" parent="Coll"]
+visible = false
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="CameraPivot" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0 )
+
+[node name="Camera" type="Camera" parent="CameraPivot"]
+current = true
+fov = 85.0
+
+[node name="Rays" type="Spatial" parent="CameraPivot/Camera"]
+
+[node name="PickableItem" type="RayCast" parent="CameraPivot/Camera/Rays"]
+enabled = true
+cast_to = Vector3( 0, 0, -4 )
+collision_mask = 5
+collide_with_areas = true
+
+[node name="Item" type="Spatial" parent="CameraPivot/Camera"]
+script = ExtResource( 5 )
+cameraNode = NodePath("..")
+
+[node name="PosPivot" type="Spatial" parent="CameraPivot/Camera/Item"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3, -0.3, -0.2 )
+
+[node name="Pos" type="Position3D" parent="CameraPivot/Camera/Item/PosPivot"]
+
+[node name="ItemContainer" type="Spatial" parent="CameraPivot/Camera/Item/PosPivot/Pos"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, -1.6 )
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+autoplay = "Walk"
+anims/Idle = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+anims/Run = SubResource( 12 )
+anims/Walk = SubResource( 5 )
+
+[node name="AminTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 10 )
+anim_player = NodePath("../Anim")
+active = true
+parameters/playback = SubResource( 11 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Crosshair" type="Control" parent="GUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="SFX" type="Node" parent="Sounds"]
+
+[node name="PickItem" type="AudioStreamPlayer" parent="Sounds/SFX"]
+stream = ExtResource( 3 )
+volume_db = -10.0
+mix_target = 2
+bus = "SFX"
