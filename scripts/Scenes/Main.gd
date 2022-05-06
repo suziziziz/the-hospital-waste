@@ -1,5 +1,6 @@
 extends Control
 
+export var _c_test = 0
 export(PackedScene) var nextScene
 
 func _ready():
