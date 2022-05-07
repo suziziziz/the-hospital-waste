@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/textures/placeholders/wall.jpg" type="Texture" id=1]
+[ext_resource path="res://shaders/godot-psx-shaders/PSX Shaders/psx_lit.shader" type="Shader" id=2]
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 2, 3, 2 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/specular_intensity = null
+shader_param/resolution = 48.0
+shader_param/cull_distance = 45.0
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/albedoTex = ExtResource( 1 )
+
+[sub_resource type="CubeMesh" id=3]
+material = SubResource( 2 )
+
+[node name="Wall" type="StaticBody"]
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )
+
+[node name="Wall" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -2, 1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall4" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall5" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall6" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall7" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -2, -1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall8" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, -1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall9" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall10" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall11" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null
+
+[node name="Wall12" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1 )
+mesh = SubResource( 3 )
+skeleton = NodePath("StaticBody")
+material/0 = null

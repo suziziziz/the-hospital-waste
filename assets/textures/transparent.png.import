@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/wall.jpg-a03e3c40cea89f78856ce0b8bb91ffec.s3tc.stex"
-path.etc2="res://.import/wall.jpg-a03e3c40cea89f78856ce0b8bb91ffec.etc2.stex"
+path.s3tc="res://.import/transparent.png-36812d6fc8451750778bbf47268321e5.s3tc.stex"
+path.etc2="res://.import/transparent.png-36812d6fc8451750778bbf47268321e5.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/placeholders/wall.jpg"
-dest_files=[ "res://.import/wall.jpg-a03e3c40cea89f78856ce0b8bb91ffec.s3tc.stex", "res://.import/wall.jpg-a03e3c40cea89f78856ce0b8bb91ffec.etc2.stex" ]
+source_file="res://assets/textures/transparent.png"
+dest_files=[ "res://.import/transparent.png-36812d6fc8451750778bbf47268321e5.s3tc.stex", "res://.import/transparent.png-36812d6fc8451750778bbf47268321e5.etc2.stex" ]
 
 [params]
 
@@ -21,9 +21,9 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=false
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=1
 process/fix_alpha_border=true

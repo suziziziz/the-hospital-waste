@@ -25,8 +25,9 @@ func turnOutline(value: bool):
     if !isPicked:
       nOutline.visible = value
 
-func _process(_delta):
+func _process(delta):
   if pickable:
+    rotate_y(deg2rad(135) * delta)
     if isPicked:
       scale -= Vector3.ONE * .1
       if scale.x <= 0:

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/wall.jpg-a03e3c40cea89f78856ce0b8bb91ffec.s3tc.stex"
-path.etc2="res://.import/wall.jpg-a03e3c40cea89f78856ce0b8bb91ffec.etc2.stex"
+path.s3tc="res://.import/floor.png-ce832d8171e2144948b5fe475899e96f.s3tc.stex"
+path.etc2="res://.import/floor.png-ce832d8171e2144948b5fe475899e96f.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/placeholders/wall.jpg"
-dest_files=[ "res://.import/wall.jpg-a03e3c40cea89f78856ce0b8bb91ffec.s3tc.stex", "res://.import/wall.jpg-a03e3c40cea89f78856ce0b8bb91ffec.etc2.stex" ]
+source_file="res://assets/textures/placeholders/floor.png"
+dest_files=[ "res://.import/floor.png-ce832d8171e2144948b5fe475899e96f.s3tc.stex", "res://.import/floor.png-ce832d8171e2144948b5fe475899e96f.etc2.stex" ]
 
 [params]
 
@@ -26,7 +26,7 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=1
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false

@@ -185,7 +185,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0 )
 
 [node name="Camera" type="Camera" parent="CameraPivot"]
 current = true
-fov = 85.0
 
 [node name="Rays" type="Spatial" parent="CameraPivot/Camera"]
 
